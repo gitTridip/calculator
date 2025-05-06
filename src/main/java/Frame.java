@@ -7,12 +7,16 @@ public class Frame extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	protected Frame(){
-		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(600, 600);
-		this.setResizable(true);
+		this.setSize(320, 360);
+		this.setResizable(false);
+		this.setLayout(null);
 		
-		ImageIcon logo=new ImageIcon(Apk.class.getResource("/resources/logo.png"));
+		ImageIcon logo=new ImageIcon(Frame.class.getResource("/resources/logo.png"));
 		this.setIconImage(logo.getImage());
+		
+		new Components(this);
+
+		this.setVisible(true);
 	}
 }
